@@ -63,7 +63,7 @@ def main():
                 You see a dungeon before you and know that your destiny nears.
                 Do you dare go inside? 'Enter' or 'Leave', the choice is yours.
                 Going forward enter your choices carefully, as a wrong move may cost
-                you your life. 
+                you your life.
                 """))
 
             if character == 'wizard':
@@ -84,7 +84,7 @@ def main():
                     return "death"
 
                 else:
-                    print("Your indecision has cost you your life.")
+                    print("As you stand and think about your decision, you feel darkness start to surround you.")
                     return "death"
 
             elif character == 'fighter':
@@ -105,7 +105,7 @@ def main():
                     return "death"
 
                 else:
-                    print("Your indecision has cost you your life.")
+                    print("As you stand and think about your decision, you feel darkness start to surround you.")
                     return "death"
 
             elif character == 'rogue':
@@ -126,7 +126,7 @@ def main():
                     return "death"
 
                 else:
-                    print("Your indecision has cost you your life.")
+                    print("As you stand and think about your decision, you feel darkness start to surround you.")
                     return "death"
 
     class FirstEncounter(Scene):
@@ -175,7 +175,7 @@ def main():
                     return "death"
 
                 else:
-                    print("Your indecision has cost you your life.")
+                    print("As you stand and think about what to do, the zombie rushes forward.")
                     return "death"
 
             elif character == "fighter":
@@ -215,6 +215,10 @@ def main():
                         get through you.
                         """))
                     return "mimic_room"
+
+                else:
+                    print("As you stand and think about what to do, the zombie rushes forward.")
+                    return "death"
 
             elif character == "rogue":
                 print(dedent("""
@@ -256,6 +260,9 @@ def main():
                         """))
                     return "death"
 
+                else:
+                    print("As you stand and think about what to do, the zombie rushes forward.")
+                    return "death"
     class MimicRoom(Scene):
 
         def enter(self):
@@ -297,7 +304,7 @@ def main():
                     return "death"
 
                 else:
-                    print("As you stand and try to make a decision the right chest lunges forward...")
+                    print("As you stand and try to make a decision one of the chests lunge forward...")
                     return "death"
 
             elif character == "fighter":
@@ -329,7 +336,7 @@ def main():
                     return "death"
 
                 else:
-                    print("As you stand and try to make a decision the right chest lunges forward...")
+                    print("As you stand and try to make a decision one of the chests lunge forward...")
                     return "death"
 
             elif character == "rogue":
@@ -357,7 +364,7 @@ def main():
                     return "death"
 
                 else:
-                    print("As you stand and try to make a decision the right chest lunges forward...")
+                    print("As you stand and try to make a decision one of the chests lunge forward...")
                     return "death"
 
     class Finished(Scene):
